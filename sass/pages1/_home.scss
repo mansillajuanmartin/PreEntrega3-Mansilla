@@ -246,3 +246,35 @@
     }
   }
 }
+
+/* Inscripción Section */
+.cta-section {
+  padding: 80px 0;
+  background-color: $primary;
+  color: white;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+
+  .btn-cta {
+    background-color: $light;
+    color: $primary;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+
+    /* Aplicación del Mixin SASS */
+    @include hover-fx(scale(1.05), 0 5px 15px rgba(0, 0, 0, 0.3));
+  }
+}

@@ -239,4 +239,36 @@ h6 {
   color: white;
 }
 
+/* Inscripción Section */
+.cta-section {
+  padding: 80px 0;
+  background-color: #2c5e3b;
+  color: white;
+  text-align: center;
+}
+.cta-section h2 {
+  margin-bottom: 20px;
+}
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+.cta-section .btn-cta {
+  background-color: #f8f9fa;
+  color: #2c5e3b;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  /* Aplicación del Mixin SASS */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cta-section .btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 /*# sourceMappingURL=styles.css.map */
