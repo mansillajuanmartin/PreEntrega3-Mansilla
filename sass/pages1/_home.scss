@@ -150,3 +150,99 @@
     }
   }
 }
+
+/* Distances Section */
+.distances-section {
+  padding: 100px 0;
+  background-color: $light;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    color: $dark;
+
+    span {
+      color: $secondary;
+    }
+  }
+
+  .card-distance {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+
+    /* Aplicación del Mixin SASS */
+    @include hover-fx(translateY(-10px), 0 15px 40px rgba(0, 0, 0, 0.15));
+
+    .card-header {
+      background-color: $primary;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-bottom: none;
+
+      h3 {
+        margin: 0;
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+    }
+
+    .card-body {
+      padding: 30px;
+      text-align: center;
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: $dark;
+        margin-bottom: 5px;
+      }
+
+      .payments {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+
+        li {
+          padding: 10px 0;
+          border-bottom: 1px solid #eee;
+          font-size: 1.1rem;
+
+          i {
+            color: $secondary;
+            width: 25px;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .btn-card {
+        width: 100%;
+        border: 2px solid $primary;
+        color: $primary;
+        font-weight: 600;
+        border-radius: 30px;
+        padding: 10px;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+}
