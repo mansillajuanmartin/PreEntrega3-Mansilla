@@ -1,9 +1,2 @@
-$primary-color: green;
-
-body {
-    background-color: $primary-color;
-}
-
-h1 {
-    color: yellow;
-}
+@use "base/reset";
+@use "pages1/home";

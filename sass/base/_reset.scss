@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Base*/
+body {
+  font-family: $font-body;
+  color: $dark;
+  background-color: $light;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 800;
+}
+

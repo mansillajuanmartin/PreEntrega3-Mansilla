@@ -1,0 +1,13 @@
+/* --- MIXIN SASS ---
+         * Este mixin reutiliza el efecto de elevación con sombra
+         * que comparten las tarjetas y algunos botones.
+         */
+@mixin hover-fx($transform-val, $shadow-val) {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  &:hover {
+    transform: $transform-val;
+    box-shadow: $shadow-val;
+  }
+}

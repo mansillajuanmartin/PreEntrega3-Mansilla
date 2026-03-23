@@ -1,9 +1,79 @@
-body {
-  background-color: green;
+@charset "UTF-8";
+/* --- VARIABLES SASS --- */
+/* Verde Bosque */
+/* Naranja Trail */
+/* --- MIXIN SASS ---
+         * Este mixin reutiliza el efecto de elevación con sombra
+         * que comparten las tarjetas y algunos botones.
+         */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: yellow;
+/* Estilos Base*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+/* Navigation */
+.navbar {
+  transition: all 0.4s ease;
+  padding: 1rem 0;
+  background-color: transparent;
+}
+.navbar.scrolled {
+  background-color: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+.navbar .navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: white !important;
+}
+.navbar .navbar-brand span {
+  color: #f37021;
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+  color: #f37021 !important;
+}
+.navbar .btn-inscribirse {
+  background-color: #f37021;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 8px 24px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.navbar .btn-inscribirse:hover {
+  background-color: rgb(213.4615384615, 87.5, 11.5384615385);
+  transform: translateY(-2px);
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
