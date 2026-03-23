@@ -1,7 +1,5 @@
 @use "../utilities/variables" as *;
 
-@use "../utilities/mixin" as *;
-
 /* Reset */
 * {
   margin: 0;
@@ -26,4 +24,3 @@ h6 {
   font-family: $font-heading;
   font-weight: 800;
 }
-

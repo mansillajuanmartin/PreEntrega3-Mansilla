@@ -1,11 +1,5 @@
 @charset "UTF-8";
 /* --- VARIABLES SASS --- */
-/* Verde Bosque */
-/* Naranja Trail */
-/* --- MIXIN SASS ---
-         * Este mixin reutiliza el efecto de elevación con sombra
-         * que comparten las tarjetas y algunos botones.
-         */
 /* Reset */
 * {
   margin: 0;
@@ -31,6 +25,10 @@ h6 {
   font-weight: 800;
 }
 
+/* --- MIXIN SASS ---
+         * Este mixin reutiliza el efecto de elevación con sombra
+         * que comparten las tarjetas y algunos botones.
+         */
 /* Navigation */
 .navbar {
   transition: all 0.4s ease;
@@ -74,6 +72,61 @@ h6 {
   background-color: rgb(213.4615384615, 87.5, 11.5384615385);
   transform: translateY(-2px);
   color: white;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/images/fondo4.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero .hero-content {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+}
+.hero .hero-content h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .hero .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+.hero .hero-content .date-location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.hero .hero-content .date-location i {
+  color: #f37021;
+  margin-right: 10px;
+}
+.hero .hero-content .btn-hero {
+  background-color: #f37021;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: none;
+  box-shadow: 0 5px 15px rgba(243, 112, 33, 0.4);
+}
+.hero .hero-content .btn-hero:hover {
+  background-color: rgb(213.4615384615, 87.5, 11.5384615385);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(243, 112, 33, 0.6);
 }
 
 /*# sourceMappingURL=styles.css.map */
