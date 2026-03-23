@@ -278,3 +278,63 @@
     @include hover-fx(scale(1.05), 0 5px 15px rgba(0, 0, 0, 0.3));
   }
 }
+
+/* Footer */
+footer {
+  background-color: $dark;
+  color: white;
+  padding: 60px 0 30px;
+
+  h5 {
+    color: $secondary;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $secondary;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+}
