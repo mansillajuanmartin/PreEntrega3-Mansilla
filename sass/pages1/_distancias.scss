@@ -1,109 +1,108 @@
 @use "../utilities/variables" as *;
 
-/* =================================================================
-   NUEVA SECCIÓN: CIRCUITOS Y ALTIMETRÍAS (circuitos.html)
-   Utiliza CSS Grid nativo.
-   ================================================================= */
-
 .page-circuitos {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('/images/fondo6.jpg');
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("../images/fondo6.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 
-    .circuitos-main {
-        flex-grow: 1; /* Mantiene el footer abajo si hay poco contenido */
+  .circuitos-main {
+    flex-grow: 1;
+  }
+
+  .grid-container {
+    padding: 120px 5% 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+
+    .section-title {
+      text-align: center;
+      color: $dark;
+      margin-bottom: 3rem;
+      span {
+        color: $secondary;
+      }
     }
+  }
 
-    .grid-container {
-        padding: 120px 5% 80px; /* Padding superior para el Navbar fixed */
-        max-width: 1400px;
-        margin: 0 auto;
+  .grid-circuitos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    .grid-item {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      .item-header {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        h3 {
+          font-size: 1.6rem;
+          margin-bottom: 0.5rem;
+        }
+        p {
+          color: #6c757d;
+          margin: 0;
+        }
+      }
+
+      .img-circuito {
         width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+        margin-top: 1rem;
 
-        .section-title {
-            text-align: center;
-            color: $dark;
-            margin-bottom: 3rem;
-            span { color: $secondary; }
+        &:hover {
+          transform: scale(1.02);
         }
-    }
+      }
 
-    /* CSS GRID NATIVO */
+      &.item-5k h3 {
+        color: $primary;
+      }
+      &.item-14k h3 {
+        color: $secondary;
+      }
+      &.item-30k h3 {
+        color: $dark;
+      }
+    }
+  }
+
+  /* MEDIA QUERIES PARA GRID */
+  @media (max-width: 992px) {
     .grid-circuitos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 Columnas idénticas */
-        gap: 3rem; /* Separación de filas y columnas */
-        
-        .grid-item {
-            /* Estilos directos de la tarjeta (sin Mixin) */
-            background-color: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-            }
-
-            .item-header {
-                text-align: center;
-                margin-bottom: 1rem;
-                
-                h3 {
-                    font-size: 1.6rem;
-                    margin-bottom: 0.5rem;
-                }
-                p {
-                    color: #6c757d;
-                    margin: 0;
-                }
-            }
-
-            .img-circuito {
-                /* Estilos directos de la imagen responsiva (sin Mixin) */
-                width: 100%;
-                height: auto;
-                max-height: 450px;
-                object-fit: contain; /* Evita que las imágenes se estiren si tienen distintas proporciones */
-                border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-                transition: transform 0.3s ease;
-                margin-top: 1rem;
-                
-                &:hover {
-                    transform: scale(1.02);
-                }
-            }
-
-            /* Colores temáticos por distancia */
-            &.item-5k h3 { color: $primary; }
-            &.item-14k h3 { color: $secondary; }
-            &.item-30k h3 { color: $dark; }
-        }
+      gap: 2rem;
     }
-    
-    /* MEDIA QUERIES PARA LA CUADRÍCULA (Grid Responsivo) */
-    @media (max-width: 992px) {
-        .grid-circuitos {
-            gap: 2rem;
-        }
-    }
+  }
 
-    @media (max-width: 768px) {
-        .grid-circuitos {
-            /* En móviles pasamos a 1 sola columna vertical */
-            grid-template-columns: 1fr; 
-            gap: 2rem;
-        }
+  @media (max-width: 768px) {
+    .grid-circuitos {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
-    
+  }
 }

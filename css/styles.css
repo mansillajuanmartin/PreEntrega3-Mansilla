@@ -78,7 +78,7 @@ h6 {
 .home {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/images/fondo1.jpg) no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../images/fondo1.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -326,17 +326,13 @@ body.layout-flex {
   flex-direction: column;
 }
 body.layout-flex .coming-soon-section {
-  /* 1. Ocupa exactamente toda la pantalla visible (100vh), forzando el footer a quedar abajo (requiere scroll) */
   min-height: 100vh;
   width: 100%;
-  /* 2. Flexbox para centrar el texto sobre la montaña (sin Bootstrap) */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* 3. Imagen de fondo con gradiente para mejorar la lectura */
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/images/fondo3.jpg) no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../images/fondo3.jpg) no-repeat center center;
   background-size: cover;
-  /* Compensamos el espacio del Navbar fijo superior */
   padding: 100px 20px 40px;
   text-align: center;
 }
@@ -350,11 +346,11 @@ body.layout-flex .coming-soon-section .coming-soon-title {
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   margin: 0;
   line-height: 1.3;
-  font-size: 3.5rem; /* Tamaño Escritorio */
+  font-size: 3.5rem;
 }
 body.layout-flex {
-  /* MEDIA QUERIES PARA RESPONSIVIDAD (SASS PURO) */
-  /* Dispositivos Medianos (Tablets y Desktop pequeños) */
+  /* MEDIA QUERIES PARA RESPONSIVIDAD */
+  /* Dispositivos Medianos  */
 }
 @media (max-width: 992px) {
   body.layout-flex .coming-soon-section .coming-soon-title {
@@ -363,7 +359,7 @@ body.layout-flex {
   }
 }
 body.layout-flex {
-  /* Dispositivos Pequeños (Tablets verticales y Móviles Horizontales) */
+  /* Dispositivos Pequeños */
 }
 @media (max-width: 768px) {
   body.layout-flex .coming-soon-section .coming-soon-title {
@@ -371,7 +367,7 @@ body.layout-flex {
   }
 }
 body.layout-flex {
-  /* Dispositivos Extra Pequeños (Smartphones Verticales) */
+  /* Dispositivos Extra Pequeños */
 }
 @media (max-width: 576px) {
   body.layout-flex .coming-soon-section .coming-soon-title {
@@ -380,25 +376,21 @@ body.layout-flex {
   }
 }
 
-/* =================================================================
-   NUEVA SECCIÓN: CIRCUITOS Y ALTIMETRÍAS (circuitos.html)
-   Utiliza CSS Grid nativo.
-   ================================================================= */
 .page-circuitos {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("/images/fondo6.jpg");
+  background-image: url("../images/fondo6.jpg");
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 .page-circuitos .circuitos-main {
-  flex-grow: 1; /* Mantiene el footer abajo si hay poco contenido */
+  flex-grow: 1;
 }
 .page-circuitos .grid-container {
-  padding: 120px 5% 80px; /* Padding superior para el Navbar fixed */
+  padding: 120px 5% 80px;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -411,16 +403,12 @@ body.layout-flex {
 .page-circuitos .grid-container .section-title span {
   color: #f37021;
 }
-.page-circuitos {
-  /* CSS GRID NATIVO */
-}
 .page-circuitos .grid-circuitos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 Columnas idénticas */
-  gap: 3rem; /* Separación de filas y columnas */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 .page-circuitos .grid-circuitos .grid-item {
-  /* Estilos directos de la tarjeta (sin Mixin) */
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -446,11 +434,10 @@ body.layout-flex {
   margin: 0;
 }
 .page-circuitos .grid-circuitos .grid-item .img-circuito {
-  /* Estilos directos de la imagen responsiva (sin Mixin) */
   width: 100%;
   height: auto;
   max-height: 450px;
-  object-fit: contain; /* Evita que las imágenes se estiren si tienen distintas proporciones */
+  object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -458,9 +445,6 @@ body.layout-flex {
 }
 .page-circuitos .grid-circuitos .grid-item .img-circuito:hover {
   transform: scale(1.02);
-}
-.page-circuitos .grid-circuitos .grid-item {
-  /* Colores temáticos por distancia */
 }
 .page-circuitos .grid-circuitos .grid-item.item-5k h3 {
   color: #2c5e3b;
@@ -472,7 +456,7 @@ body.layout-flex {
   color: #1a1a1a;
 }
 .page-circuitos {
-  /* MEDIA QUERIES PARA LA CUADRÍCULA (Grid Responsivo) */
+  /* MEDIA QUERIES PARA GRID */
 }
 @media (max-width: 992px) {
   .page-circuitos .grid-circuitos {
@@ -481,7 +465,6 @@ body.layout-flex {
 }
 @media (max-width: 768px) {
   .page-circuitos .grid-circuitos {
-    /* En móviles pasamos a 1 sola columna vertical */
     grid-template-columns: 1fr;
     gap: 2rem;
   }
