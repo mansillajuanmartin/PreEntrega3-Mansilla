@@ -380,4 +380,111 @@ body.layout-flex {
   }
 }
 
+/* =================================================================
+   NUEVA SECCIÓN: CIRCUITOS Y ALTIMETRÍAS (circuitos.html)
+   Utiliza CSS Grid nativo.
+   ================================================================= */
+.page-circuitos {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("/images/fondo6.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.page-circuitos .circuitos-main {
+  flex-grow: 1; /* Mantiene el footer abajo si hay poco contenido */
+}
+.page-circuitos .grid-container {
+  padding: 120px 5% 80px; /* Padding superior para el Navbar fixed */
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+.page-circuitos .grid-container .section-title {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+}
+.page-circuitos .grid-container .section-title span {
+  color: #f37021;
+}
+.page-circuitos {
+  /* CSS GRID NATIVO */
+}
+.page-circuitos .grid-circuitos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Columnas idénticas */
+  gap: 3rem; /* Separación de filas y columnas */
+}
+.page-circuitos .grid-circuitos .grid-item {
+  /* Estilos directos de la tarjeta (sin Mixin) */
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.page-circuitos .grid-circuitos .grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+.page-circuitos .grid-circuitos .grid-item .item-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.page-circuitos .grid-circuitos .grid-item .item-header h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.page-circuitos .grid-circuitos .grid-item .item-header p {
+  color: #6c757d;
+  margin: 0;
+}
+.page-circuitos .grid-circuitos .grid-item .img-circuito {
+  /* Estilos directos de la imagen responsiva (sin Mixin) */
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain; /* Evita que las imágenes se estiren si tienen distintas proporciones */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  margin-top: 1rem;
+}
+.page-circuitos .grid-circuitos .grid-item .img-circuito:hover {
+  transform: scale(1.02);
+}
+.page-circuitos .grid-circuitos .grid-item {
+  /* Colores temáticos por distancia */
+}
+.page-circuitos .grid-circuitos .grid-item.item-5k h3 {
+  color: #2c5e3b;
+}
+.page-circuitos .grid-circuitos .grid-item.item-14k h3 {
+  color: #f37021;
+}
+.page-circuitos .grid-circuitos .grid-item.item-30k h3 {
+  color: #1a1a1a;
+}
+.page-circuitos {
+  /* MEDIA QUERIES PARA LA CUADRÍCULA (Grid Responsivo) */
+}
+@media (max-width: 992px) {
+  .page-circuitos .grid-circuitos {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .page-circuitos .grid-circuitos {
+    /* En móviles pasamos a 1 sola columna vertical */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
